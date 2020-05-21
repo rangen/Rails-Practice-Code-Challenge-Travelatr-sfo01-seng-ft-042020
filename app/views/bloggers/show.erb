@@ -1,0 +1,13 @@
+<h2>Info for <%= @blogger.name %></h2>
+<h4>Age: <%= @blogger.age %></h4>
+<p>Bio: <%= @blogger.bio %></p>
+
+<p>Total Likes: <%= @blogger.total_likes %></p>
+
+<h4>Featured Post: <%= link_to @blogger.featured_post.title, @blogger.featured_post %></h4>
+
+<h4>My Top 5 Destinations</h4>
+<% @blogger.top_five.each do |dest| %>
+<%= link_to dest.name, dest %><br />
+
+<% end %>

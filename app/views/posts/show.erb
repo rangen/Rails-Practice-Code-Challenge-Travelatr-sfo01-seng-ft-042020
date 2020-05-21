@@ -1,0 +1,11 @@
+<h2>Post Info</h2>
+<h3><%= @post.title %></h3>
+<h4><%= @post.content %></h4>
+<h3>Likes: <%= @post.likes %></h3>
+
+<h5><%= link_to @post.blogger.name, @post.blogger %></h5>
+<h5><%= link_to @post.destination.name, @post.destination %></h5>
+<h5><%= link_to "Like this Post", dreams_favorite_path(@post), method: :post %></h5>
+
+
+

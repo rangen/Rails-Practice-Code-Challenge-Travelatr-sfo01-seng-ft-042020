@@ -1,0 +1,10 @@
+<h2><%= @dest.name %> Info</h2>
+
+<h4>Most Recent Posts:</h4>
+<% @dest.recent_five_posts.each do |d| %>
+<%= link_to d.title, d %><br>
+<% end %>
+
+<h4>Featured Post: <%= link_to @dest.most_liked_post.title, @dest.most_liked_post %></h4>
+
+<h4>Average Age of Blogger: <%= @dest.avg_age_of_bloggers %></h4>
