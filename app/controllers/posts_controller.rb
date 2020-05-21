@@ -8,8 +8,9 @@ class PostsController < ApplicationController
     end
 
     def increment_like
-        Post.find(params[:id]).increment_like
-        redirect_to Post.find(params[:id])
+        post = Post.find(params[:id])
+        post.increment_like
+        redirect_to post
     end
 
     def create
